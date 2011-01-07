@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = D2AAC07D0554694100DB518D /* smsdialog */;
+		addToTargets = (
+			D2AAC07D0554694100DB518D /* smsdialog */,
+		);
+		breakpoints = (
+			0999853F12BD107B0033CA65 /* ComOmorandiSMSDialogProxy.m:79 */,
+			091A98C312D759050056C055 /* ComOmorandiSMSDialogProxy.m:78 */,
+			091A98D412D75A200056C055 /* ComOmorandiSMSDialogProxy.m:78 */,
+		);
+		codeSenseManager = 09324F0112B2C88E0060ADC3 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					993,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 316089923;
+			PBXWorkspaceStateSaveDate = 316089923;
+		};
+		perUserProjectItems = {
+			09116AE212CE220300B69B7E = 09116AE212CE220300B69B7E /* PBXTextBookmark */;
+			09116AF212CE26BF00B69B7E = 09116AF212CE26BF00B69B7E /* PBXTextBookmark */;
+			09116AF312CE26BF00B69B7E = 09116AF312CE26BF00B69B7E /* PBXTextBookmark */;
+			09116AF412CE26BF00B69B7E = 09116AF412CE26BF00B69B7E /* PBXTextBookmark */;
+			091A987212D7264C0056C055 /* PBXTextBookmark */ = 091A987212D7264C0056C055 /* PBXTextBookmark */;
+			091A987612D726520056C055 /* PBXBookmark */ = 091A987612D726520056C055 /* PBXBookmark */;
+			091A987712D7268B0056C055 /* PBXTextBookmark */ = 091A987712D7268B0056C055 /* PBXTextBookmark */;
+			091A987A12D7268B0056C055 /* PBXTextBookmark */ = 091A987A12D7268B0056C055 /* PBXTextBookmark */;
+			091A987B12D726C40056C055 /* PBXTextBookmark */ = 091A987B12D726C40056C055 /* PBXTextBookmark */;
+			091A987C12D726C40056C055 /* PBXTextBookmark */ = 091A987C12D726C40056C055 /* PBXTextBookmark */;
+			091A98AF12D727F70056C055 /* PBXTextBookmark */ = 091A98AF12D727F70056C055 /* PBXTextBookmark */;
+			091A98B012D727F70056C055 /* PBXTextBookmark */ = 091A98B012D727F70056C055 /* PBXTextBookmark */;
+			091A98B112D728A00056C055 /* PBXTextBookmark */ = 091A98B112D728A00056C055 /* PBXTextBookmark */;
+			091A98B212D728A00056C055 /* PBXTextBookmark */ = 091A98B212D728A00056C055 /* PBXTextBookmark */;
+			091A98B312D728A00056C055 /* PBXTextBookmark */ = 091A98B312D728A00056C055 /* PBXTextBookmark */;
+			091A98BE12D728D30056C055 /* PBXTextBookmark */ = 091A98BE12D728D30056C055 /* PBXTextBookmark */;
+			091A98BF12D728D30056C055 /* PBXTextBookmark */ = 091A98BF12D728D30056C055 /* PBXTextBookmark */;
+			091A98C812D759210056C055 /* PBXTextBookmark */ = 091A98C812D759210056C055 /* PBXTextBookmark */;
+			091A98C912D759210056C055 /* PBXTextBookmark */ = 091A98C912D759210056C055 /* PBXTextBookmark */;
+			091A98CA12D759210056C055 /* PBXTextBookmark */ = 091A98CA12D759210056C055 /* PBXTextBookmark */;
+			091A98CB12D7595C0056C055 /* PBXTextBookmark */ = 091A98CB12D7595C0056C055 /* PBXTextBookmark */;
+			091A98CC12D7595C0056C055 /* PBXTextBookmark */ = 091A98CC12D7595C0056C055 /* PBXTextBookmark */;
+			091A98DA12D75B8E0056C055 /* PBXTextBookmark */ = 091A98DA12D75B8E0056C055 /* PBXTextBookmark */;
+			091A98DB12D75B8E0056C055 /* PBXTextBookmark */ = 091A98DB12D75B8E0056C055 /* PBXTextBookmark */;
+			091A98DC12D75B8E0056C055 /* PBXTextBookmark */ = 091A98DC12D75B8E0056C055 /* PBXTextBookmark */;
+			091A98DF12D75BBA0056C055 /* PBXTextBookmark */ = 091A98DF12D75BBA0056C055 /* PBXTextBookmark */;
+			091A98E012D75BBA0056C055 /* PBXTextBookmark */ = 091A98E012D75BBA0056C055 /* PBXTextBookmark */;
+			091A98F212D75DA80056C055 /* PBXTextBookmark */ = 091A98F212D75DA80056C055 /* PBXTextBookmark */;
+			091A98F312D75DB30056C055 /* PBXTextBookmark */ = 091A98F312D75DB30056C055 /* PBXTextBookmark */;
+			0999857112BD14B50033CA65 = 0999857112BD14B50033CA65 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 09324F0012B2C88E0060ADC3 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	09116AE212CE220300B69B7E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0212B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.h */;
+		name = "ComOmorandiSMSDialogProxy.h: 46";
+		rLen = 0;
+		rLoc = 1083;
+		rType = 0;
+		vrLen = 839;
+		vrLoc = 628;
+	};
+	09116AF212CE26BF00B69B7E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 78";
+		rLen = 0;
+		rLoc = 1481;
+		rType = 0;
+		vrLen = 1421;
+		vrLoc = 1086;
+	};
+	09116AF312CE26BF00B69B7E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 24DE9E1011C5FE74003F90F6 /* ComOmorandiModuleAssets.m */;
+		name = "ComOmorandiModuleAssets.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 0;
+	};
+	09116AF412CE26BF00B69B7E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 24DE9E1011C5FE74003F90F6 /* ComOmorandiModuleAssets.m */;
+		name = "ComOmorandiModuleAssets.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 0;
+	};
+	091A987212D7264C0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 24DE9E1011C5FE74003F90F6 /* ComOmorandiModuleAssets.m */;
+		name = "ComOmorandiModuleAssets.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 0;
+	};
+	091A987612D726520056C055 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+	};
+	091A987712D7268B0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 24DE9E1011C5FE74003F90F6 /* ComOmorandiModuleAssets.m */;
+		name = "ComOmorandiModuleAssets.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 0;
+	};
+	091A987A12D7268B0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 78";
+		rLen = 0;
+		rLoc = 1481;
+		rType = 0;
+		vrLen = 1867;
+		vrLoc = 1301;
+	};
+	091A987B12D726C40056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 24DE9E1011C5FE74003F90F6 /* ComOmorandiModuleAssets.m */;
+		name = "ComOmorandiModuleAssets.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 0;
+	};
+	091A987C12D726C40056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 94";
+		rLen = 0;
+		rLoc = 2063;
+		rType = 0;
+		vrLen = 1956;
+		vrLoc = 1210;
+	};
+	091A98AF12D727F70056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 24DE9E1011C5FE74003F90F6 /* ComOmorandiModuleAssets.m */;
+		name = "ComOmorandiModuleAssets.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 0;
+	};
+	091A98B012D727F70056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 94";
+		rLen = 0;
+		rLoc = 2063;
+		rType = 0;
+		vrLen = 1956;
+		vrLoc = 1210;
+	};
+	091A98B112D728A00056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 24DE9E1011C5FE74003F90F6 /* ComOmorandiModuleAssets.m */;
+		name = "ComOmorandiModuleAssets.m: 16";
+		rLen = 0;
+		rLoc = 262;
+		rType = 0;
+		vrLen = 262;
+		vrLoc = 0;
+	};
+	091A98B212D728A00056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 81";
+		rLen = 0;
+		rLoc = 1598;
+		rType = 0;
+		vrLen = 1364;
+		vrLoc = 1166;
+	};
+	091A98B312D728A00056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 94";
+		rLen = 0;
+		rLoc = 2063;
+		rType = 0;
+		vrLen = 1956;
+		vrLoc = 1210;
+	};
+	091A98BE12D728D30056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 84";
+		rLen = 0;
+		rLoc = 1769;
+		rType = 0;
+		vrLen = 1376;
+		vrLoc = 803;
+	};
+	091A98BF12D728D30056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 94";
+		rLen = 0;
+		rLoc = 2063;
+		rType = 0;
+		vrLen = 1956;
+		vrLoc = 1210;
+	};
+	091A98C312D759050056C055 /* ComOmorandiSMSDialogProxy.m:78 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		functionName = "-open:";
+		hitCount = 2;
+		ignoreCount = 0;
+		lineNumber = 78;
+		location = SMSTest;
+		modificationTime = 316104257.877788;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	091A98C812D759210056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 66";
+		rLen = 0;
+		rLoc = 1367;
+		rType = 0;
+		vrLen = 1282;
+		vrLoc = 1345;
+	};
+	091A98C912D759210056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 66";
+		rLen = 0;
+		rLoc = 1367;
+		rType = 0;
+		vrLen = 1282;
+		vrLoc = 1345;
+	};
+	091A98CA12D759210056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 94";
+		rLen = 0;
+		rLoc = 2063;
+		rType = 0;
+		vrLen = 1956;
+		vrLoc = 1210;
+	};
+	091A98CB12D7595C0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 66";
+		rLen = 0;
+		rLoc = 1367;
+		rType = 0;
+		vrLen = 1282;
+		vrLoc = 1345;
+	};
+	091A98CC12D7595C0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 94";
+		rLen = 0;
+		rLoc = 2063;
+		rType = 0;
+		vrLen = 1956;
+		vrLoc = 1210;
+	};
+	091A98D412D75A200056C055 /* ComOmorandiSMSDialogProxy.m:78 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 78;
+		location = SMSTest;
+		modificationTime = 316104234.048787;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	091A98DA12D75B8E0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 66";
+		rLen = 0;
+		rLoc = 1367;
+		rType = 0;
+		vrLen = 1466;
+		vrLoc = 1413;
+	};
+	091A98DB12D75B8E0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 66";
+		rLen = 0;
+		rLoc = 1367;
+		rType = 0;
+		vrLen = 1466;
+		vrLoc = 1413;
+	};
+	091A98DC12D75B8E0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 106";
+		rLen = 0;
+		rLoc = 2623;
+		rType = 0;
+		vrLen = 1967;
+		vrLoc = 1210;
+	};
+	091A98DF12D75BBA0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 66";
+		rLen = 0;
+		rLoc = 1367;
+		rType = 0;
+		vrLen = 1466;
+		vrLoc = 1413;
+	};
+	091A98E012D75BBA0056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 106";
+		rLen = 0;
+		rLoc = 2623;
+		rType = 0;
+		vrLen = 1884;
+		vrLoc = 1675;
+	};
+	091A98F212D75DA80056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 118";
+		rLen = 0;
+		rLoc = 2884;
+		rType = 0;
+		vrLen = 1453;
+		vrLoc = 1958;
+	};
+	091A98F312D75DB30056C055 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		name = "ComOmorandiSMSDialogProxy.m: 118";
+		rLen = 0;
+		rLoc = 2884;
+		rType = 0;
+		vrLen = 1453;
+		vrLoc = 1958;
+	};
+	09324F0012B2C88E0060ADC3 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	09324F0112B2C88E0060ADC3 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	09324F0212B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 949}}";
+			sepNavSelRange = "{1083, 0}";
+			sepNavVisRange = "{628, 839}";
+		};
+	};
+	09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 2652}}";
+			sepNavSelRange = "{2884, 0}";
+			sepNavVisRange = "{1958, 1453}";
+			sepNavWindowFrame = "{{15, 4}, {1425, 874}}";
+		};
+	};
+	099984D912BABE5A0033CA65 /* TiBase.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = TiBase.h;
+		path = "/Library/Application Support/Titanium/mobilesdk/osx/1.4.3/iphone/include/TiBase.h";
+		sourceTree = "<absolute>";
+	};
+	0999853F12BD107B0033CA65 /* ComOmorandiSMSDialogProxy.m:79 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 09324F0312B2C89B0060ADC3 /* ComOmorandiSMSDialogProxy.m */;
+		functionName = "-open:";
+		hitCount = 2;
+		ignoreCount = 0;
+		lineNumber = 79;
+		location = SMSTest;
+		modificationTime = 316104260.70891;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	0999857112BD14B50033CA65 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 099984D912BABE5A0033CA65 /* TiBase.h */;
+		name = "TiBase.h: 151";
+		rLen = 24;
+		rLoc = 4618;
+		rType = 0;
+		vrLen = 1150;
+		vrLoc = 4113;
+	};
+	24416B8111C4CA220047AFDD /* Build & Test */ = {
+		activeExec = 0;
+	};
+	24DD6CF81134B3F500162E58 /* ComOmorandiModule.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1366, 1391}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1197}";
+			sepNavWindowFrame = "{{15, 4}, {1425, 874}}";
+		};
+	};
+	24DE9E1011C5FE74003F90F6 /* ComOmorandiModuleAssets.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1171, 541}}";
+			sepNavSelRange = "{262, 0}";
+			sepNavVisRange = "{0, 262}";
+		};
+	};
+	D2AAC07D0554694100DB518D /* smsdialog */ = {
+		activeExec = 0;
+	};
+}
