@@ -25,6 +25,7 @@ You can either copy this file to `/Library/Application\ Support/Titanium` and re
 
      unzip -u -o com.omorandi-iphone-0.1.zip -d /Library/Application\ Support/Titanium/
 
+**Note:** The module has been built using version 1.4.3 of the Titanium Mobile SDK, and the build system expects that SDK to be installed in your system. If you get build errors, the cause might be that the above requirement is not met. In order to overcome the problem you should modify the TITANIUM_SDK_VERSION value in order to match the version number of the SDK actually installed on your machine (e.g. 1.5.1).
 
 ## Referencing the module in your Titanium Mobile application ##
 
