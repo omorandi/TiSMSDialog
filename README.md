@@ -57,27 +57,27 @@ The provided API is extremely simple: once the module is instantiated, you can c
 
 ## Reference
 
-### SMSDialog.addRecipient(arg) Method
+### `SMSDialog.addRecipient(arg)` Method
 
 Add a recipient for the message to be sent
 
-arg: a string containing the phone number of the recipient
+`arg`: a string containing the phone number of the recipient
 
 
-### SMSDialog.isSupported() Method
+### `SMSDialog.isSupported()` Method
 
 Check if the device provides in-app SMS sending capabilities 
 
-return value: true if in app SMS sending is supported on the device at hand; false otherwise
+return value: `true` if in app SMS sending is supported on the device at hand; false otherwise
 
-### SMSDialog.open(arg) Method
+### `SMSDialog.open(arg)` Method
 
 Open the SMS dialog in a modal window
 
-argument: an object containing animation properties
+`arg`: an object containing animation properties
 The only supported property is:
 
-* animated: (bool) if true the window is opened with a slide-in animation
+* `animated`: (bool) if true the window is opened with a slide-in animation
 
 
 ### SMSDialog.barColor Property
@@ -91,6 +91,28 @@ The only supported property is:
 ### SMSDialog.recipients Property
 
 (array) array of strings containing the recipients phone numbers
+
+
+## Events
+
+The SMSDialog object supports only the `'complete'` event, which is fired when the user interacts with the dialog window, reporting the result of the operation. 
+
+The event object contains the following properties:
+
+### `result`
+An integer value representing the result of the operation. Possible values for this property are:
+
+* `SMSDialog.SENT`
+* `SMSDialog.FAILED`
+* `SMSDialog.CANCELLED`
+
+which are quite self-explanatory ;-)
+
+### `success`
+a boolean value that is true if the message has been sent out correctly, and false otherwise
+
+### `resultMessage`
+a string containing a textual description of the result
 
 
 ## Usage
@@ -123,6 +145,18 @@ The only supported property is:
             Ti.API.info("Result: " + e.error);
             var a = Ti.UI.createAlertDialog({title: 'complete', message: 'Result: ' + e.error});
             a.show();
+            if (e.result == smsDialog.SENT)
+            {
+                //do something
+            }
+            else if (e.result == smsDialog.FAILED)
+            {
+               //do something else
+            }
+            else if (e.result == smsDialog.CANCELLED)
+            {
+               //don't bother
+            } 
         });
 
         //open the SMS dialog window with slide-up animation
