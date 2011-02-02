@@ -142,8 +142,8 @@ a string containing a textual description of the result
 	
         //add an event listener for the 'complete' event, in order to be notified about the result of the operation
         smsDialog.addEventListener('complete', function(e){
-            Ti.API.info("Result: " + e.error);
-            var a = Ti.UI.createAlertDialog({title: 'complete', message: 'Result: ' + e.error});
+            Ti.API.info("Result: " + e.resultMessage);
+            var a = Ti.UI.createAlertDialog({title: 'complete', message: 'Result: ' + e.resultMessage});
             a.show();
             if (e.result == smsDialog.SENT)
             {
