@@ -121,7 +121,7 @@
 
 	
 	//create the MFMessageComposeViewController
-	MFMessageComposeViewController * composer = [[MFMessageComposeViewController alloc] init];
+	MFMessageComposeViewController * composer = [[NSClassFromString(@"MFMessageComposeViewController") alloc] init];
 	
 	//set our proxy as delegate (for responding to messageComposeViewController:didFinishWithResult)
 	composer.messageComposeDelegate = self;
