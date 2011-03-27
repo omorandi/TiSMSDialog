@@ -71,7 +71,6 @@
 }
 
 
-
 // create and open the SMS dialog window
 - (void)open:(id)args
 {
@@ -108,11 +107,9 @@
 	
 	
 	
-	
 	//get the messageBody property
 	NSString * messageBody= [TiUtils stringValue:[self valueForUndefinedKey:@"messageBody"]];
-	
-
+		
 	//get the barColor property
 	UIColor * barColor = [[TiUtils colorValue:[self valueForUndefinedKey:@"barColor"]] _color];
 	
@@ -132,6 +129,7 @@
 		[[composer navigationBar] setTintColor:barColor];
 	}
 
+	
 	//set the recipients array
 	composer.recipients = recipients;
 	
