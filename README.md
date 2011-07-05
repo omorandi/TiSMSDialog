@@ -8,10 +8,9 @@ In app SMS sending is available since version 4.0 of iOS, so, in order to suppor
 
 The module is licensed under the MIT license.
 
-If you find it useful, why don't tweet about it using this short link: [http://bit.ly/eA1puP](http://bit.ly/eA1puP)?
+You might want to follow me on twitter: [olivier_morandi](http://twitter.com/olivier_morandi)
 
-You might also want to follow me on twitter: [olivier_morandi](http://twitter.com/olivier_morandi)
-
+For any issue, request or enquiry, please contact me at [olivier.morandi@gmail.com](olivier.morandi@gmail.com)
 
 ## Building and installing the SMSDialog Module ##
 
@@ -19,13 +18,11 @@ First, you must have your XCode and Titanium Mobile SDKs in place, and have at l
 
 The build process can be launched using the build.py script that you find in the module's code root directory. 
 
-As a result, the com.omorandi-iphone-0.1.zip file will be generated. 
+As a result, the com.omorandi-iphone-0.2.zip file will be generated. 
 
 You can either copy this file to `/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
 
-     unzip -u -o com.omorandi-iphone-0.1.zip -d /Library/Application\ Support/Titanium/
-
-**Note:** The module has been built using version 1.4.3 of the Titanium Mobile SDK, and the build system expects that SDK to be installed in your system. If you get build errors, the cause might be that the above requirement is not met. In order to overcome the problem you should modify the `TITANIUM_SDK_VERSION` value at line 7 of the `titanium.xcconfig` file, in order to match the version number of the SDK actually installed on your machine (e.g. 1.5.1).
+     unzip -u -o com.omorandi-iphone-0.2.zip -d /Library/Application\ Support/Titanium/
 
 
 ## Referencing the module in your Titanium Mobile application ##
@@ -33,7 +30,7 @@ You can either copy this file to `/Library/Application\ Support/Titanium` and re
 Simply add the following lines to your `tiapp.xml` file:
     
     <modules>
-        <module version="0.1">com.omorandi</module> 
+        <module version="0.2" platform="iphone">com.omorandi</module> 
     </modules>
 
 
@@ -168,12 +165,12 @@ a string containing a textual description of the result
 
 **Olivier Morandi**
 
-    email: olivier.morandi [[[at]]] gmail.com
+    email: olivier.morandi@gmail.com
     twitter: olivier_morandi
 
 ## License
 
-    Copyright (c) 2010 Olivier Morandi
+    Copyright (c) 2010-2011 Olivier Morandi
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
