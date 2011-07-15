@@ -8,12 +8,17 @@ In app SMS sending is available since version 4.0 of iOS, so, in order to suppor
 
 The module is licensed under the MIT license.
 
-If you find it useful, why don't tweet about it using this short link: [http://bit.ly/eA1puP](http://bit.ly/eA1puP)?
-
 You might also want to follow me on twitter: [olivier_morandi](http://twitter.com/olivier_morandi)
 
 
 ## Building and installing the SMSDialog Module ##
+
+### Build ###
+**NOTE 1: if you're only interested in using the module, this step is not necessary, since you can find a build of the module package (`com.omorandi-iphone-0.1.zip`) in the main directory of the repository. **
+
+**NOTE 2: if you really want to build the module by yourself, please note that the module has been built using version 1.6.2 of the Titanium Mobile SDK, and the build system expects that SDK to be installed in your system. If you get build errors, the cause might be that the above requirement is not met. In order to overcome the problem you should modify the `TITANIUM_SDK_VERSION` value at line 7 of the `titanium.xcconfig` file, in order to match the version number of the SDK actually installed on your machine (e.g. 1.7.0). **
+
+Now the build instructions:
 
 First, you must have your XCode and Titanium Mobile SDKs in place, and have at least read the first few pages of the [iOS Module Developer Guide](http://developer.appcelerator.com/guides/en/module_ios.html) from Appcelerator.
 
@@ -21,11 +26,10 @@ The build process can be launched using the build.py script that you find in the
 
 As a result, the com.omorandi-iphone-0.1.zip file will be generated. 
 
-You can either copy this file to `/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
+### Install ###
+You can either copy the com.omorandi-iphone-0.1.zip package file to `/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
 
      unzip -u -o com.omorandi-iphone-0.1.zip -d /Library/Application\ Support/Titanium/
-
-**Note:** The module has been built using version 1.4.3 of the Titanium Mobile SDK, and the build system expects that SDK to be installed in your system. If you get build errors, the cause might be that the above requirement is not met. In order to overcome the problem you should modify the `TITANIUM_SDK_VERSION` value at line 7 of the `titanium.xcconfig` file, in order to match the version number of the SDK actually installed on your machine (e.g. 1.5.1).
 
 
 ## Referencing the module in your Titanium Mobile application ##
