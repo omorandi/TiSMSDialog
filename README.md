@@ -14,9 +14,9 @@ You might also want to follow me on twitter: [olivier_morandi](http://twitter.co
 ## Building and installing the SMSDialog Module ##
 
 ### Build ###
-**NOTE 1: if you're only interested in using the module, this step is not necessary, since you can find a build of the module package (`com.omorandi-iphone-0.1.zip`) in the main directory of the repository. **
+#### NOTE 1: if you're only interested in using the module, this step is not necessary, since you can find a build of the module package (`com.omorandi-iphone-0.1.zip`) in the main directory of the repository. ####
 
-**NOTE 2: if you really want to build the module by yourself, please note that the module has been built using version 1.6.2 of the Titanium Mobile SDK, and the build system expects that SDK to be installed in your system. If you get build errors, the cause might be that the above requirement is not met. In order to overcome the problem you should modify the `TITANIUM_SDK_VERSION` value at line 7 of the `titanium.xcconfig` file, in order to match the version number of the SDK actually installed on your machine (e.g. 1.7.0). **
+#### NOTE 2: if you really want to build the module by yourself, please note that the module has been built using version 1.6.2 of the Titanium Mobile SDK, and the build system expects that SDK to be installed in your system. If you get build errors, the cause might be that the above requirement is not met. In order to overcome the problem you should modify the `TITANIUM_SDK_VERSION` value at line 7 of the `titanium.xcconfig` file, in order to match the version number of the SDK actually installed on your machine (e.g. 1.7.0). ####
 
 Now the build instructions:
 
