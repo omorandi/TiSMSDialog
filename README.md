@@ -14,13 +14,37 @@ For any issue, request or enquiry, please contact me at [olivier.morandi@gmail.c
 
 ## Building and installing the SMSDialog Module ##
 
+### BUILD ###
+
+NOTE 1: if you're only interested in using the module, this step is not necessary, since you can find a build of the module package (`com.omorandi-iphone-0.2.zip`) in the main directory of the repository. 
+
+NOTE 2: if you really want to build the module by yourself, please note that the module has been built using version 1.7.1 of the Titanium Mobile SDK, and the build system expects that SDK to be installed in your system. If you get build errors, the cause might be that the above requirement is not met. In order to overcome the problem you should modify the `TITANIUM_SDK_VERSION` value at line 7 of the `titanium.xcconfig` file, in order to match the version number of the SDK actually installed on your machine (e.g. 1.8.0).
+
+NOTE 3: if you need to use this module with previous versions of the Ti sdk (e.g. between 1.4.3 and 1.6.2, just check-out the 1.6.2 branch of this repository) and re-read the README notice for details.
+
+Now the build instructions:
+
 First, you must have your XCode and Titanium Mobile SDKs in place, and have at least read the first few pages of the [iOS Module Developer Guide](http://developer.appcelerator.com/guides/en/module_ios.html) from Appcelerator.
 
 The build process can be launched using the build.py script that you find in the module's code root directory. 
 
 As a result, the com.omorandi-iphone-0.2.zip file will be generated. 
 
-You can either copy this file to `/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
+NOTE: don't worry if the build script reports the following errors: 
+
+    Traceback (most recent call last):
+      File "./build.py", line 191, in <module>
+        package_module(manifest,mf,config)
+      File "./build.py", line 171, in package_module
+        docs = generate_doc(config)
+      File "./build.py", line 52, in generate_doc
+        import markdown2
+     ImportError: No module named markdown2
+
+if you see `** BUILD SUCCEEDED **` messages and the build product is there, all is ok ;-)
+
+### INSTALL ###
+You can either copy the module package (com.omorandi-iphone-0.2.zip) to `/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
 
      unzip -u -o com.omorandi-iphone-0.2.zip -d /Library/Application\ Support/Titanium/
 
