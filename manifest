@@ -2,11 +2,11 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 0.3
+version: 1.0.1
 description: SMSDialog module
 author: Olivier Morandi
 license: MIT license
-copyright: Copyright (c) 2010-2011 by Olivier Morandi
+copyright: Copyright (c) 2010-2013 by Olivier Morandi
 
 
 # these should not be edited
@@ -14,4 +14,4 @@ name: smsdialog
 moduleid: com.omorandi
 guid: 87f37de9-e076-43cb-a2a0-a840e45af0d7
 platform: iphone
-minsdk: 1.7.3
+minsdk: 3.1.2.GA

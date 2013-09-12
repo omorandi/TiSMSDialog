@@ -74,6 +74,7 @@
 // create and open the SMS dialog window
 - (void)open:(id)args
 {
+    [self rememberSelf];
 	ENSURE_SINGLE_ARG_OR_NIL(args, NSDictionary);
 
 	// ensure that the functionality is supported
@@ -118,7 +119,7 @@
 
 	
 	//create the MFMessageComposeViewController
-	MFMessageComposeViewController * composer = [[NSClassFromString(@"MFMessageComposeViewController") alloc] init];
+	MFMessageComposeViewController * composer = [[MFMessageComposeViewController alloc] init];
 	
 	//set our proxy as delegate (for responding to messageComposeViewController:didFinishWithResult)
 	composer.messageComposeDelegate = self;
@@ -129,7 +130,8 @@
 		[[composer navigationBar] setTintColor:barColor];
 	}
 
-	
+    NSLog(@"SMS WantsFullScreenLayout: %@", composer.wantsFullScreenLayout?@"YES":@"NO");
+	NSLog(@"Modal presentation style: %d", composer.modalPresentationStyle);
 	//set the recipients array
 	composer.recipients = recipients;
 	
@@ -200,10 +202,10 @@ MAKE_SYSTEM_PROP(FAILED,MessageComposeResultFailed);
 		[self fireEvent:@"complete" withObject:event];
 	}
 	
-	[composer dismissModalViewControllerAnimated:YES];
+	[composer dismissViewControllerAnimated:YES completion:nil];
 	
-	[self autorelease];
-}
+	[self forgetSelf];
+	[self autorelease];}
 
 
 

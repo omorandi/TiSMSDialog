@@ -4,52 +4,27 @@
 
 The SMSDialog Module extends the Appcelerator Titanium Mobile framework implementing an iPhone dialog window that enables you to send in application text messages on behalf of the app user, exposing an API very similar to the one of the Ti.UI.EmailDialog object. Both recipients and body fields can be pre-populated from your application.
 
-In app SMS sending is available since version 4.0 of iOS, so, in order to support devices with previous versions of the operating system, your application should check if the feature is available through the isSupported() method, and either provide a fallback solution (e.g. using the Ti.Platform.openURL('sms:') function), or fail gracefully.
-
-The module is licensed under the MIT license.
-
-You might want to follow me on twitter: [olivier_morandi](http://twitter.com/olivier_morandi)
-
-For any issue, request or enquiry, please contact me at [olivier.morandi@gmail.com](olivier.morandi@gmail.com)
-
 ## Building and installing the SMSDialog Module ##
 
 ### BUILD ###
+First, you must have your XCode and Titanium Mobile SDKs in place, and have at least read the first few pages of the [iOS Module Development Guide](http://docs.appcelerator.com/titanium/latest/#!/guide/iOS_Module_Development_Guide).
 
-NOTE 1: if you're only interested in using the module, this step is not necessary, since you can find a build of the module package (`com.omorandi-iphone-0.3.zip`) in the main directory of the repository. 
+The build process can be launched using the build.py script that you find in the module's code root directory.
 
-NOTE 2: if you really want to build the module by yourself, please note that the module has been built using version 1.7.3 of the Titanium Mobile SDK, and the build system expects that SDK to be installed in your system. If you get build errors, the cause might be that the above requirement is not met. In order to overcome the problem you should modify the `TITANIUM_SDK_VERSION` value at line 7 of the `titanium.xcconfig` file, in order to match the version number of the SDK actually installed on your machine (e.g. 1.8.0).
-
-NOTE 3: if you need to use this module with previous versions of the Ti sdk (e.g. between 1.4.3 and 1.6.2, just check-out the 1.6.2 branch of this repository) and re-read the README notice for details.
-
-Now the **build instructions**:
-
-First, you must have your XCode and Titanium Mobile SDKs in place, and have at least read the first few pages of the [iOS Module Developer Guide](http://developer.appcelerator.com/guides/en/module_ios.html) from Appcelerator.
-
-The build process can be launched using the build.py script that you find in the module's code root directory. 
-
-As a result, the `com.omorandi-iphone-0.3.zip` file will be generated. 
-
-if you see `** BUILD SUCCEEDED **` messages and the build product is there, all is ok ;-)
+As a result, the `com.omorandi-iphone-1.0.1.zip` file will be generated.
 
 ### INSTALL ###
-You can either copy the module package (`com.omorandi-iphone-0.3.zip`) to `/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
+You can either copy the module package (`com.omorandi-iphone-1.0.1.zip`) to `~/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
 
-     unzip -u -o com.omorandi-iphone-0.3.zip -d /Library/Application\ Support/Titanium/
-
-On your system the Titanium SDK directory may be located in your home folder under 
-
-	~/Library/Application\ Support/Titanium/
-
-In this case modify the above commands accordingly
+     unzip -u -o com.omorandi-iphone-1.0.1.zip -d ~/Library/Application\ Support/Titanium/
 
 
 ## Referencing the module in your Titanium Mobile application ##
 
 Simply add the following lines to your `tiapp.xml` file:
-    
+
     <modules>
-        <module version="0.3" platform="iphone">com.omorandi</module> 
+        <module version="1.0.1" platform="iphone">com.omorandi</module>
     </modules>
 
 
@@ -60,7 +35,7 @@ To access this module from JavaScript, you would do the following:
 
 	var moduleObj = require("com.omorandi");
 
-The moduleObj variable is a reference to the Module object.	
+The moduleObj variable is a reference to the Module object.
 
 The provided API is extremely simple: once the module is instantiated, you can create an SMSDialog object and use it for opening an SMS dialog window, evenutally pre-populated with recipient numbers and a message body:
 
@@ -82,7 +57,7 @@ Add a recipient for the message to be sent
 
 ### `SMSDialog.isSupported()` Method
 
-Check if the device provides in-app SMS sending capabilities 
+Check if the device provides in-app SMS sending capabilities
 
 return value: `true` if in app SMS sending is supported on the device at hand; false otherwise
 
@@ -111,7 +86,7 @@ The only supported property is:
 
 ## Events
 
-The SMSDialog object supports only the `'complete'` event, which is fired when the user interacts with the dialog window, reporting the result of the operation. 
+The SMSDialog object supports only the `'complete'` event, which is fired when the user interacts with the dialog window, reporting the result of the operation.
 
 The event object contains the following properties:
 
@@ -136,7 +111,7 @@ a string containing a textual description of the result
     //instantiate the module
     var module = require('com.omorandi');
     Ti.API.info("module is => " + module);
-    
+
     //create the smsDialog object
     var smsDialog = module.createSMSDialog();
 
@@ -152,10 +127,10 @@ a string containing a textual description of the result
         //pre-populate the dialog with the info provided in the following properties
         smsDialog.recipients = ['+14151234567'];
         smsDialog.messageBody = 'Test message from me';
-	
+
         //set the color of the title-bar
         smsDialog.barColor = 'red';
-	
+
         //add an event listener for the 'complete' event, in order to be notified about the result of the operation
         smsDialog.addEventListener('complete', function(e){
             Ti.API.info("Result: " + e.resultMessage);
@@ -172,7 +147,7 @@ a string containing a textual description of the result
             else if (e.result == smsDialog.CANCELLED)
             {
                //don't bother
-            } 
+            }
         });
 
         //open the SMS dialog window with slide-up animation
@@ -189,7 +164,7 @@ a string containing a textual description of the result
 
 ## License
 
-    Copyright (c) 2010-2011 Olivier Morandi
+    Copyright (c) 2010-2013 Olivier Morandi
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
