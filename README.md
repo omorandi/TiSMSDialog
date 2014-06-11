@@ -11,12 +11,12 @@ First, you must have your XCode and Titanium Mobile SDKs in place, and have at l
 
 The build process can be launched using the build.py script that you find in the module's code root directory.
 
-As a result, the `com.omorandi-iphone-1.0.1.zip` file will be generated.
+As a result, the `com.omorandi-iphone-1.0.2.zip` file will be generated.
 
 ### INSTALL ###
-You can either copy the module package (`com.omorandi-iphone-1.0.1.zip`) to `~/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
+You can either copy the module package (`com.omorandi-iphone-1.0.2.zip`) to `~/Library/Application\ Support/Titanium` and reference the module in your application (the Titanium SDK will automatically unzip the file in the right place), or manually launch the command:
 
-     unzip -u -o com.omorandi-iphone-1.0.1.zip -d ~/Library/Application\ Support/Titanium/
+     unzip -u -o com.omorandi-iphone-1.0.2.zip -d ~/Library/Application\ Support/Titanium/
 
 
 ## Referencing the module in your Titanium Mobile application ##
@@ -24,7 +24,7 @@ You can either copy the module package (`com.omorandi-iphone-1.0.1.zip`) to `~/L
 Simply add the following lines to your `tiapp.xml` file:
 
     <modules>
-        <module version="1.0.1" platform="iphone">com.omorandi</module>
+        <module version="1.0.2" platform="iphone">com.omorandi</module>
     </modules>
 
 
@@ -164,7 +164,7 @@ a string containing a textual description of the result
 
 ## License
 
-    Copyright (c) 2010-2013 Olivier Morandi
+    Copyright (c) 2010-2014 Olivier Morandi
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
