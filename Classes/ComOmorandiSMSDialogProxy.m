@@ -130,8 +130,6 @@
 		[[composer navigationBar] setTintColor:barColor];
 	}
 
-    NSLog(@"SMS WantsFullScreenLayout: %@", composer.wantsFullScreenLayout?@"YES":@"NO");
-	NSLog(@"Modal presentation style: %d", composer.modalPresentationStyle);
 	//set the recipients array
 	composer.recipients = recipients;
 	
