@@ -3,22 +3,22 @@
 #import "TiColor.h"
 #import "TiApp.h"
 
+@interface ComOmorandiSMSDialogProxy()
+
+@property (nonatomic, assign) BOOL attachmentsDisabled;
+@property (nonatomic, retain) NSMutableArray *attachments;
+
+@end
+
+
 @implementation ComOmorandiSMSDialogProxy
 
-/*
-	Proxy memory management
-*/
+
 
 - (void) dealloc
 {
 	RELEASE_TO_NIL(recipients);
 	[super dealloc];
-}
-
--(void)_destroy
-{
-	RELEASE_TO_NIL(recipients);
-	[super _destroy];
 }
 
 
@@ -45,6 +45,65 @@
 }
 
 
+-(BOOL)attachmentsSupported
+{
+    Class messageComposerClass = [self messageComposerClass];
+    if (messageComposerClass == nil) {
+        return NO;
+    }
+    if (![messageComposerClass respondsToSelector:@selector(canSendAttachments)]) {
+        return NO;
+    }
+    return [NSNumber numberWithBool:[messageComposerClass canSendAttachments]];
+}
+
+
+-(Class)messageComposerClass
+{
+    return NSClassFromString(@"MFMessageComposeViewController");
+}
+
+-(id)canSendAttachments:(id)args
+{
+    return [NSNumber numberWithBool:[self attachmentsSupported]];
+}
+
+-(void)disableUserAttachments:(id)args
+{
+    self.attachmentsDisabled = YES;
+}
+
+-(void)addAttachment:(id)args
+{
+    if (![self attachmentsSupported]) {
+        [self throwException:@"sending attachments is not supported on the current device" subreason:nil location:CODELOCATION];
+    }
+    if ([args count] < 1) {
+        [self throwException:@"expected string or TiBlob argument" subreason:nil location:CODELOCATION];
+    }
+    
+    id attachment = [args objectAtIndex:0];
+    
+    if (!([attachment isKindOfClass:[NSString class]] || [attachment isKindOfClass:[TiBlob class]])) {
+        [self throwException:@"expected string or TiBlob argument" subreason:nil location:CODELOCATION];
+    }
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:attachment forKey:@"attachment"];
+    
+    if ([args count] > 1) {
+        NSString *alternateFileName = [args objectAtIndex:1];
+        ENSURE_TYPE(alternateFileName, NSString);
+        
+        [dict setObject:alternateFileName forKey:@"alternateFileName"];
+    }
+    if (self.attachments == nil) {
+        self.attachments = [NSMutableArray array];
+    }
+
+    [self.attachments addObject:dict];
+}
+
 // Check if the device provides sms sending capabilities
 - (id)isSupported:(id)args
 {
@@ -57,7 +116,7 @@
 	BOOL smsSupported = NO;
 
 	//First we check the existence of the MFMessageComposeViewController class
-	Class messageClass = (NSClassFromString(@"MFMessageComposeViewController"));
+	Class messageClass = [self messageComposerClass];
 	
     if (messageClass != nil) 
 	{         		
@@ -74,8 +133,10 @@
 // create and open the SMS dialog window
 - (void)open:(id)args
 {
+    ENSURE_SINGLE_ARG_OR_NIL(args, NSDictionary);
+    
     [self rememberSelf];
-	ENSURE_SINGLE_ARG_OR_NIL(args, NSDictionary);
+	
 
 	// ensure that the functionality is supported
 	if (![self isSupported:nil])
@@ -123,7 +184,25 @@
 	
 	//set our proxy as delegate (for responding to messageComposeViewController:didFinishWithResult)
 	composer.messageComposeDelegate = self;
-	
+    
+    if (self.attachmentsDisabled) {
+        [composer disableUserAttachments];
+    }
+    
+    if ([self.attachments count] > 0) {
+        for (NSDictionary *dict in self.attachments) {
+            id attachment = dict[@"attachment"];
+            NSString *alternateFileName = dict[@"alternateFileName"];
+            if ([attachment isKindOfClass:[NSString class]]) {
+                [composer addAttachmentURL:[TiUtils toURL:attachment proxy:self] withAlternateFilename:alternateFileName];
+            }
+            else if ([attachment isKindOfClass:[TiBlob class]]){
+                [composer addAttachmentData:[attachment data] typeIdentifier:[attachment mimeType] filename:alternateFileName];
+            }
+        }
+    }
+    
+    
 	//set the navbar color	
 	if (barColor != nil)
 	{
@@ -203,7 +282,8 @@ MAKE_SYSTEM_PROP(FAILED,MessageComposeResultFailed);
 	[composer dismissViewControllerAnimated:YES completion:nil];
 	
 	[self forgetSelf];
-	[self autorelease];}
+	[self autorelease];
+}
 
 
 
