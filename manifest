@@ -2,11 +2,11 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.1.0
-description: SMSDialog module
+version: 1.1.1
+description: The SMSDialog Module extends the Appcelerator Titanium Mobile framework implementing an iPhone dialog window that enables you to send in application text messages on behalf of the app user, exposing an API very similar to the one of the Ti.UI.EmailDialog object. Both recipients and body fields can be pre-populated from your application.
 author: Olivier Morandi
 license: MIT license
-copyright: Copyright (c) 2010-2013 by Olivier Morandi
+copyright: Copyright (c) 2010-2014 by Olivier Morandi
 
 
 # these should not be edited

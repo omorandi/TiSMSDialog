@@ -20,6 +20,20 @@ var showDialog = function() {
         //set the color of the title-bar
         smsDialog.barColor = 'red';
 
+        //add attachments if supported
+        if (smsDialog.canSendAttachments()) {
+            Ti.API.info('We can send attachments');
+            //add an attachment as a file path
+            smsDialog.addAttachment('images/01.jpg', 'image1.jpg');
+
+            var file = Ti.Filesystem.getFile('images/02.jpg');
+            //add an attachment as a TiBlob
+            smsDialog.addAttachment(file.read(), 'image2.jpg');
+        }
+        else {
+            Ti.API.info('We cannot send attachments');
+        }
+
         //add an event listener for the 'complete' event, in order to be notified about the result of the operation
         smsDialog.addEventListener('complete', function(e){
             Ti.API.info("Result: " + e.resultMessage);
