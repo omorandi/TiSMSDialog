@@ -32,8 +32,6 @@
 	// this method is called when the module is first loaded
 	// you *must* call the superclass
 	[super startup];
-	
-	NSLog(@"[INFO] %@ loaded",self);
 }
 
 -(void)shutdown:(id)sender

@@ -26,8 +26,8 @@ def replace_vars(config,token):
 		token = token.replace('$(%s)' % key, config[key])
 		idx = token.find('$(')
 	return token
-		
-		
+
+
 def read_ti_xcconfig():
 	contents = open(os.path.join(cwd,'titanium.xcconfig')).read()
 	config = {}
@@ -60,18 +60,18 @@ def generate_doc(config):
 def compile_js(manifest,config):
 	js_file = os.path.join(cwd,'assets','com.omorandi.js')
 	if not os.path.exists(js_file): return
-	
+
 	sdk = config['TITANIUM_SDK']
 	iphone_dir = os.path.join(sdk,'iphone')
 	sys.path.insert(0,iphone_dir)
 	from compiler import Compiler
-	
+
 	path = os.path.basename(js_file)
 	metadata = Compiler.make_function_from_file(path,js_file)
 	method = metadata['method']
 	eq = path.replace('.','_')
 	method = '  return %s;' % method
-	
+
 	f = os.path.join(cwd,'Classes','ComOmorandiModuleAssets.m')
 	c = open(f).read()
 	idx = c.find('return ')
@@ -82,24 +82,24 @@ def compile_js(manifest,config):
 @end
 	"""
 	newc = before + method + after
-	
+
 	if newc!=c:
 		x = open(f,'w')
 		x.write(newc)
 		x.close()
-		
+
 def die(msg):
 	print msg
 	sys.exit(1)
 
 def warn(msg):
-	print "[WARN] %s" % msg	
+	print "[WARN] %s" % msg
 
 def validate_license():
 	c = open('LICENSE').read()
 	if c.find(module_license_default)!=1:
 		warn('please update the LICENSE file with your license text before distributing')
-			
+
 def validate_manifest():
 	path = os.path.join(cwd,'manifest')
 	f = open(path)
@@ -112,7 +112,7 @@ def validate_manifest():
 		key,value = line.split(':')
 		manifest[key.strip()]=value.strip()
 	for key in required_module_keys:
-		if not manifest.has_key(key): die("missing required manifest key '%s'" % key)	
+		if not manifest.has_key(key): die("missing required manifest key '%s'" % key)
 		if module_defaults.has_key(key):
 			defvalue = module_defaults[key]
 			curvalue = manifest[key]
@@ -126,12 +126,12 @@ def zip_dir(zf,dir,basepath,ignore=[]):
 	for root, dirs, files in os.walk(dir):
 		for name in ignoreDirs:
 			if name in dirs:
-				dirs.remove(name)	# don't visit ignored directories			  
+				dirs.remove(name)	# don't visit ignored directories
 		for file in files:
 			if file in ignoreFiles: continue
 			e = os.path.splitext(file)
 			if len(e)==2 and e[1]=='.pyc':continue
-			from_ = os.path.join(root, file)	
+			from_ = os.path.join(root, file)
 			to_ = from_.replace(dir, basepath, 1)
 			zf.write(from_, to_)
 
@@ -154,9 +154,11 @@ def build_module(manifest,config):
 	libpaths = ''
 	for libfile in glob_libfiles():
 		libpaths+='%s ' % libfile
-		
+
 	os.system("lipo %s -create -output build/lib%s.a" %(libpaths,moduleid))
-	
+	os.system("lipo -info build/lib%s.a" %moduleid)
+
+
 def package_module(manifest,mf,config):
 	name = manifest['name'].lower()
 	moduleid = manifest['moduleid'].lower()
@@ -174,7 +176,7 @@ def package_module(manifest,mf,config):
 	zf.write('LICENSE','%s/LICENSE' % modulepath)
 	zf.write('module.xcconfig','%s/module.xcconfig' % modulepath)
 	zf.close()
-	
+
 
 if __name__ == '__main__':
 	manifest,mf = validate_manifest()
